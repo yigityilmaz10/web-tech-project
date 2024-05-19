@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>İletişim</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <style> 
-    
-        body{background-image: url("images/background.jpg");
-      background-size: cover;
-    background-repeat: no-repeat;}
-    
-        
-        </style>
+        body {
+            background-image: url("images/background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
     <div class="conteiner">
@@ -35,7 +34,8 @@
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="hobilerim.html">Hobilerim</a>
                   <a class="dropdown-item" href="egitimhayatim.html">Eğitim Hayatım</a>
-
+                  
+                  
               </li>
               
               <li class="nav-item dropdown">
@@ -45,7 +45,7 @@
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="ilcelerimiz.html">Başlıca İlçelerimiz</a>
                   <a class="dropdown-item" href="gezilcekyerler.html">Coğrafi Güzellikler</a>
-                  <a class="dropdown-item" href="şehrimhakkindagb.html"> Yemeklerimiz </a>
+                  <a class="dropdown-item" href="yemeklerimiz.html"> Yemeklerimiz </a>
                   <a class="dropdown-item" href="mirasımız.html">Mirasımız</a>
               </li>
               <li class="nav-item">
@@ -56,28 +56,75 @@
               </li>
               
             </ul>
-            <a href="#" class="btn btn-secondary btn-lg active bg-dark" role="button" aria-pressed="true">Giriş Yap</a>
+            <a href="giris.html" class="btn btn-secondary btn-lg active bg-dark" role="button" aria-pressed="true">Giriş Yap</a>
             
           </div>
         </nav>
       </div>
+    <br><br><br><br><br><br>
 
-<br><br><br><br>
-
-      <a href="https://github.com/yigityilmaz10">
+    <center>
+    <a href="https://github.com/yigityilmaz10">
         <img src="images/png-transparent-github-social-me.png" alt="">
         
-      </a>  GitHub : yigityilmaz10 <br>
+      </a >  GitHub : yigityilmaz10 
 
       <a href="https://www.linkedin.com/in/yi%C4%9Fit-y%C4%B1lmaz-a7a560309/"> <img src="images/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2lt.jpg" alt=""></a>
       Linkedin : Yiğit Yılmaz <br>
-      <img src="images/kisspng-computer-icons-email-cli.jpg" alt=""> Email : mustafayilmaz2004@icloud.com <br>
+      <img src="images/kisspng-computer-icons-email-cli.jpg" alt=""> Email : mustafayilmaz2004@icloud.com 
       <img src="images/wp.webp" alt=""> Whatsapp : 05324297627 <br>
-    
+    </center>
 
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"> </script>
+    <!-- Contact Form -->
+    <div class="container mt-5">
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="fullName">İsminiz</label>
+                <input type="text" class="form-control" id="fullName" placeholder="İsminizi Giriniz" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Emailinizi Giriniz" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mesajınız</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Mesajınızı Giriniz" required></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="validateForm()">Gönder</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </form>
+    </div>
 
+
+    <!-- JavaScript -->
+    <script>
+        function validateForm() {
+            // Basic validation
+            let fullName = document.getElementById('fullName').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+
+            if (fullName === '' || email === '' || message === '') {
+                alert('Tüm alanları doldurun');
+                return;
+            }
+
+            // Email validation
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Geçerli bir e-posta adresi giriniz');
+                return;
+            }
+
+            // Form submission
+            // You can submit the form data here
+            alert('Form başarıyla gönderildi!');
+        }
+    </script>
+
+    <!-- JavaScript libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"> </script>
 </body>
 </html>
